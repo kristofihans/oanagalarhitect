@@ -5,8 +5,9 @@ import './ContactSection.css';
 const ContactSection = () => {
   return (
     <section id="contact" className="section contact-section">
-      <div className="container bg-white contact-container">
-        <div className="contact-grid">
+      <div className="container">
+        <div className="bg-white contact-container">
+          <div className="contact-grid">
           
           <div className="contact-info-panel">
             <h2>Hai să discutăm despre proiectul tău</h2>
@@ -74,7 +75,8 @@ const ContactSection = () => {
           
         </div>
       </div>
-      
+      </div>
+
       {/* Google Maps Embed */}
       <div className="container mt-8 mb-8 pb-8">
         <div className="map-wrapper glass">

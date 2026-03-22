@@ -50,9 +50,9 @@ const Acasa = () => {
   return (
     <div className="home-page">
       {/* Hero Section */}
-      <section className="hero" style={{ minHeight: '100vh', paddingBottom: '2rem' }}>
+      <section className="hero">
         <ArchBackground />
-        <div className="container hero-container" style={{ zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', gap: '2rem', paddingTop: '8rem' }}>
+        <div className="container hero-container">
           <div className="hero-image-wrapper" style={{ width: '100%', maxWidth: '900px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.4)', border: '1px solid rgba(255,255,255,0.2)' }}>
             <img src="arhitect/heroimage.jpg" alt="Arhitectură Modernă Oana Gal" style={{ width: '100%', height: 'auto', maxHeight: '40vh', objectFit: 'cover', display: 'block' }} />
           </div>
@@ -60,7 +60,7 @@ const Acasa = () => {
             <h1 style={{ color: 'white', textShadow: '0 4px 20px rgba(0,0,0,0.5)', fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
               Transform proiectele tale în spații funcționale, sigure și memorabile.
             </h1>
-            <div className="mt-8 flex justify-center gap-4 flex-wrap" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+            <div className="mt-4 flex justify-center gap-4 flex-wrap" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
               <Link to="/lucrari" className="btn" style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.4)', color: 'white', backdropFilter: 'blur(10px)' }}>Vezi Portofoliul <ArrowRight size={18} className="ml-2"/></Link>
             </div>
           </div>
@@ -187,7 +187,7 @@ const Acasa = () => {
               >
                 {slides.map((slide, index) => (
                   <SwiperSlide key={index}>
-                    <div className="swiper-slide-bg" style={{ backgroundImage: `url(${slide})`, height: '500px', width: '100%', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}></div>
+                    <div className="swiper-slide-bg" style={{ backgroundImage: `url(${slide})`, height: '500px', width: '100%', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
                   </SwiperSlide>
                 ))}
               </Swiper>
