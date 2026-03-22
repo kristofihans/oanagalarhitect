@@ -52,7 +52,7 @@ const Servicii = () => {
             </div>
             
             <div className="service-image hover-zoom">
-              <img src="/arhitect/serviciu1.jpg" alt="Consultanță arhitecturală" className="rounded-image" />
+              <img src="arhitect/serviciu1.jpg" alt="Consultanță arhitecturală" className="rounded-image" />
               <div className="bg-pattern"></div>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Servicii = () => {
         <div className="container">
           <div className="grid-2 align-center content-row reverse-mobile">
             <div className="service-image hover-zoom">
-              <img src="/arhitect/serviciu2.jpg" alt="Proiectare arhitecturală" className="rounded-image" />
+              <img src="arhitect/serviciu2.jpg" alt="Proiectare arhitecturală" className="rounded-image" />
               <div className="bg-pattern pattern-left"></div>
             </div>
             
@@ -128,7 +128,7 @@ const Servicii = () => {
             </div>
             
             <div className="service-image hover-zoom">
-              <img src="/arhitect/serviciu3.jpg" alt="Asistență Tehnică de Șantier" className="rounded-image" />
+              <img src="arhitect/serviciu3.jpg" alt="Asistență Tehnică de Șantier" className="rounded-image" />
               <div className="bg-pattern"></div>
             </div>
           </div>

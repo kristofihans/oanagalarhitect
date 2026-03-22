@@ -3,8 +3,8 @@ import { LayoutGrid, Building2, Home, X } from 'lucide-react';
 import ArchBackground from '../components/ArchBackground';
 import './LucrariExecutate.css';
 
-const haleImages = Array.from({ length: 8 }, (_, i) => `/arhitect/hale${i + 1}.jpg`);
-const locuinteImages = Array.from({ length: 7 }, (_, i) => `/arhitect/locuinte${i + 1}.jpg`);
+const haleImages = Array.from({ length: 8 }, (_, i) => `arhitect/hale${i + 1}.jpg`);
+const locuinteImages = Array.from({ length: 7 }, (_, i) => `arhitect/locuinte${i + 1}.jpg`);
 
 const LucrariExecutate = () => {
   const [activeTab, setActiveTab] = useState('locuinte'); // 'locuinte' sau 'hale'

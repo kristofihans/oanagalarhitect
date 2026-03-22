@@ -36,7 +36,7 @@ const Urbanism = () => {
             </div>
             
             <div className="service-image hover-zoom">
-              <img src="/arhitect/serviciiurbanism1.jpg" alt="PUD Plan Urbanistic de Detaliu" className="rounded-image" />
+              <img src="arhitect/serviciiurbanism1.jpg" alt="PUD Plan Urbanistic de Detaliu" className="rounded-image" />
               <div className="bg-pattern"></div>
             </div>
           </div>
@@ -48,7 +48,7 @@ const Urbanism = () => {
         <div className="container">
           <div className="grid-2 align-center content-row reverse-mobile">
             <div className="service-image hover-zoom">
-              <img src="/arhitect/serviciiurbanism2.jpg" alt="PUZ Plan Urbanistic Zonal" className="rounded-image" />
+              <img src="arhitect/serviciiurbanism2.jpg" alt="PUZ Plan Urbanistic Zonal" className="rounded-image" />
               <div className="bg-pattern pattern-left"></div>
             </div>
             

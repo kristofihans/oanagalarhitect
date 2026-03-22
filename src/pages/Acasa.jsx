@@ -9,10 +9,10 @@ import ArchBackground from '../components/ArchBackground';
 import './Acasa.css';
 
 const slides = [
-  '/arhitect/hale4.jpg',
-  '/arhitect/locuinte1.jpg',
-  '/arhitect/randari3.jpg',
-  '/arhitect/hale1.jpg'
+  'arhitect/hale4.jpg',
+  'arhitect/locuinte1.jpg',
+  'arhitect/randari3.jpg',
+  'arhitect/hale1.jpg'
 ];
 
 const Acasa = () => {
@@ -63,7 +63,7 @@ const Acasa = () => {
             </h1>
           </div>
           <div className="hero-image-wrapper" style={{ width: '100%', maxWidth: '900px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.4)', border: '1px solid rgba(255,255,255,0.2)' }}>
-            <img src="/arhitect/heroimage.jpg" alt="Arhitectură Modernă Oana Gal" style={{ width: '100%', height: 'auto', maxHeight: '50vh', objectFit: 'cover', display: 'block' }} />
+            <img src="arhitect/heroimage.jpg" alt="Arhitectură Modernă Oana Gal" style={{ width: '100%', height: 'auto', maxHeight: '50vh', objectFit: 'cover', display: 'block' }} />
           </div>
         </div>
       </section>
@@ -95,7 +95,7 @@ const Acasa = () => {
             </div>
             <div className="about-image-wrapper">
               <div className="about-image">
-                <img src="/arhitect/aboutme.jpg" alt="Arhitect Oana Gal" />
+                <img src="arhitect/aboutme.jpg" alt="Arhitect Oana Gal" />
                 <div className="image-decoration"></div>
               </div>
             </div>

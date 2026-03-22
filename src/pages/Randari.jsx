@@ -3,7 +3,7 @@ import { Eye } from 'lucide-react';
 import ArchBackground from '../components/ArchBackground';
 import './Randari.css';
 
-const randariImages = Array.from({ length: 6 }, (_, i) => `/arhitect/randari${i + 1}.jpg`);
+const randariImages = Array.from({ length: 6 }, (_, i) => `arhitect/randari${i + 1}.jpg`);
 
 const Randari = () => {
   return (
