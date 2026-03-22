@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Star, CheckCircle, Navigation } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation as SwiperNavigation, Pagination, Autoplay } from 'swiper/modules';
@@ -46,24 +47,22 @@ const Acasa = () => {
     }
   ];
 
-  const handleContactClick = (e) => {
-    e.preventDefault();
-    window.location.href = '/contact';
-  };
-
   return (
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero" style={{ minHeight: '100vh', paddingBottom: '2rem' }}>
         <ArchBackground />
-        <div className="container hero-container" style={{ zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', gap: '3rem', paddingTop: '6rem' }}>
+        <div className="container hero-container" style={{ zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', gap: '2rem', paddingTop: '8rem' }}>
+          <div className="hero-image-wrapper" style={{ width: '100%', maxWidth: '900px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.4)', border: '1px solid rgba(255,255,255,0.2)' }}>
+            <img src="arhitect/heroimage.jpg" alt="Arhitectură Modernă Oana Gal" style={{ width: '100%', height: 'auto', maxHeight: '40vh', objectFit: 'cover', display: 'block' }} />
+          </div>
           <div className="hero-text-content text-center" style={{ maxWidth: '900px' }}>
             <h1 style={{ color: 'white', textShadow: '0 4px 20px rgba(0,0,0,0.5)', fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
               Transform proiectele tale în spații funcționale, sigure și memorabile.
             </h1>
-          </div>
-          <div className="hero-image-wrapper" style={{ width: '100%', maxWidth: '900px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.4)', border: '1px solid rgba(255,255,255,0.2)' }}>
-            <img src="arhitect/heroimage.jpg" alt="Arhitectură Modernă Oana Gal" style={{ width: '100%', height: 'auto', maxHeight: '50vh', objectFit: 'cover', display: 'block' }} />
+            <div className="mt-8 flex justify-center gap-4 flex-wrap" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+              <Link to="/lucrari" className="btn" style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.4)', color: 'white', backdropFilter: 'blur(10px)' }}>Vezi Portofoliul <ArrowRight size={18} className="ml-2"/></Link>
+            </div>
           </div>
         </div>
       </section>
@@ -89,9 +88,9 @@ const Acasa = () => {
                   <li><Navigation size={18} className="icon-gold"/> design echilibrat, adaptat fiecărui proiect.</li>
                 </ul>
               </div>
-              <button onClick={handleContactClick} className="btn btn-accent">
+              <Link to="/contact" className="btn btn-accent">
                 Contactează-mă <ArrowRight size={20} className="ml-2" />
-              </button>
+              </Link>
             </div>
             <div className="about-image-wrapper">
               <div className="about-image">
@@ -134,21 +133,25 @@ const Acasa = () => {
               <div className="service-number">01</div>
               <h3>Proiectare arhitecturală</h3>
               <p>Proiecte pentru case unifamiliale și spații comerciale, gândite în jurul modului tău de viață sau al activității tale.</p>
+              <Link to="/servicii" className="btn btn-primary mt-4" style={{ padding: '0.6rem 1.2rem', fontSize: '0.95rem' }}>Află mai multe</Link>
             </div>
             <div className="service-card glass">
               <div className="service-number">02</div>
               <h3>Urbanism & documentații</h3>
               <p>PUZ, PUD și alte documentații necesare, explicate clar și gestionate responsabil.</p>
+              <Link to="/urbanism" className="btn btn-primary mt-4" style={{ padding: '0.6rem 1.2rem', fontSize: '0.95rem' }}>Vezi detalii</Link>
             </div>
             <div className="service-card glass">
               <div className="service-number">03</div>
               <h3>Randări și vizualizări 3D</h3>
               <p>Imagini realiste care te ajută să înțelegi spațiul înainte de execuție și să iei decizii informate.</p>
+              <Link to="/randari" className="btn btn-primary mt-4" style={{ padding: '0.6rem 1.2rem', fontSize: '0.95rem' }}>Către portofoliu 3D</Link>
             </div>
             <div className="service-card glass">
               <div className="service-number">04</div>
               <h3>Consultanță</h3>
               <p>Sprijin profesional în etapele-cheie ale proiectului, pentru a evita greșeli costisitoare și blocaje inutile.</p>
+              <Link to="/contact" className="btn btn-primary mt-4" style={{ padding: '0.6rem 1.2rem', fontSize: '0.95rem' }}>Programează o discuție</Link>
             </div>
           </div>
         </div>
@@ -167,9 +170,9 @@ const Acasa = () => {
               <p>
                 Scopul meu este să ofer soluții coerente, adaptate terenului, bugetului și cerințelor clientului, fără compromisuri inutile.
               </p>
-              <a href="/lucrari" className="btn btn-primary mt-4">
+              <Link to="/lucrari" className="btn btn-primary mt-4">
                 Vezi toate proiectele <ArrowRight size={20} className="ml-2" />
-              </a>
+              </Link>
             </div>
             <div className="slideshow-wrapper swiper-custom-wrapper">
               <Swiper
@@ -184,7 +187,7 @@ const Acasa = () => {
               >
                 {slides.map((slide, index) => (
                   <SwiperSlide key={index}>
-                    <div className="swiper-slide-bg" style={{ backgroundImage: `url(${slide})`, height: '500px', width: '100%', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+                    <div className="swiper-slide-bg" style={{ backgroundImage: `url(${slide})`, height: '500px', width: '100%', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}></div>
                   </SwiperSlide>
                 ))}
               </Swiper>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { LayoutGrid, Building2, Home, X } from 'lucide-react';
 import ArchBackground from '../components/ArchBackground';
+import Lightbox from '../components/Lightbox';
 import './LucrariExecutate.css';
 
 const haleImages = Array.from({ length: 8 }, (_, i) => `arhitect/hale${i + 1}.jpg`);
@@ -8,10 +9,16 @@ const locuinteImages = Array.from({ length: 7 }, (_, i) => `arhitect/locuinte${i
 
 const LucrariExecutate = () => {
   const [activeTab, setActiveTab] = useState('locuinte'); // 'locuinte' sau 'hale'
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const [currentImages, setCurrentImages] = useState([]);
 
-  const openLightbox = (src) => setSelectedImage(src);
-  const closeLightbox = () => setSelectedImage(null);
+  const openLightbox = (index, type) => {
+    setCurrentImages(type === 'hale' ? haleImages : locuinteImages);
+    setSelectedImageIndex(index);
+  };
+  const closeLightbox = () => setSelectedImageIndex(null);
+  const nextImage = (e) => { e.stopPropagation(); setSelectedImageIndex((prev) => (prev + 1) % currentImages.length); };
+  const prevImage = (e) => { e.stopPropagation(); setSelectedImageIndex((prev) => (prev === 0 ? currentImages.length - 1 : prev - 1)); };
 
   return (
     <div className="lucrari-page">
@@ -72,7 +79,7 @@ const LucrariExecutate = () => {
 
               <div className="gallery-masonry">
                 {locuinteImages.map((src, index) => (
-                  <div key={`loc-${index}`} className="gallery-item glass-hover" onClick={() => openLightbox(src)}>
+                  <div key={`loc-${index}`} className="gallery-item glass-hover" onClick={() => openLightbox(index, 'locuinte')}>
                     <img src={src} alt={`Locuințe proiect ${index + 1}`} loading="lazy" />
                     <div className="item-overlay">
                       <LayoutGrid size={32} />
@@ -108,7 +115,7 @@ const LucrariExecutate = () => {
 
               <div className="gallery-masonry">
                 {haleImages.map((src, index) => (
-                  <div key={`hale-${index}`} className="gallery-item glass-hover" onClick={() => openLightbox(src)}>
+                  <div key={`hale-${index}`} className="gallery-item glass-hover" onClick={() => openLightbox(index, 'hale')}>
                     <img src={src} alt={`Hale proiect ${index + 1}`} loading="lazy" />
                     <div className="item-overlay">
                       <LayoutGrid size={32} />
@@ -122,13 +129,14 @@ const LucrariExecutate = () => {
       </section>
 
       {/* Lightbox Modal */}
-      {selectedImage && (
-        <div className="lightbox-overlay" onClick={closeLightbox}>
-          <button className="lightbox-close" onClick={closeLightbox}>
-            <X size={32} />
-          </button>
-          <img src={selectedImage} alt="Proiect mărit" className="lightbox-image" onClick={(e) => e.stopPropagation()} />
-        </div>
+      {selectedImageIndex !== null && (
+        <Lightbox 
+          images={currentImages} 
+          currentIndex={selectedImageIndex} 
+          onClose={closeLightbox} 
+          onNext={nextImage} 
+          onPrev={prevImage} 
+        />
       )}
     </div>
   );

@@ -57,7 +57,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <nav className="mobile-nav glass">
+          <nav className="mobile-nav">
             <ul>
               {navLinks.map((link) => (
                 <li key={link.name}>

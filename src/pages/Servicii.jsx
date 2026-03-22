@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import ArchBackground from '../components/ArchBackground';
 import './Servicii.css';
 
@@ -46,9 +47,9 @@ const Servicii = () => {
                 <strong className="mt-4 d-block" style={{ color: 'var(--accent)' }}>Consultanță design interior (opțional)</strong>
               </div>
 
-              <a href="/contact" className="btn btn-primary mt-8">
+              <Link to="/contact" className="btn btn-primary mt-8">
                 Programează o discuție <ArrowRight size={20} className="ml-2" />
-              </a>
+              </Link>
             </div>
             
             <div className="service-image hover-zoom">
@@ -93,9 +94,9 @@ const Servicii = () => {
                 </div>
               </div>
 
-              <a href="/contact" className="btn btn-primary mt-8">
+              <Link to="/contact" className="btn btn-primary mt-8">
                 Solicită o ofertă <ArrowRight size={20} className="ml-2" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
