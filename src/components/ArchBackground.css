@@ -1,0 +1,94 @@
+.arch-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--primary);
+  z-index: 1;
+}
+
+.arch-bg {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: calc(100% + 200px);
+  height: calc(100% + 200px);
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.02) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 2px, transparent 2px);
+  background-size: 50px 50px, 50px 50px, 200px 200px, 200px 200px;
+  animation: pan 30s linear infinite;
+}
+
+@keyframes pan {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-50px, -50px); }
+}
+
+.arch-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.line {
+  position: absolute;
+  background-color: var(--accent);
+  opacity: 0.4;
+}
+
+.line-h {
+  height: 1px;
+  width: 100%;
+  left: -100%;
+  animation: draw-h 8s ease-in-out infinite alternate;
+}
+
+.line-v {
+  width: 1px;
+  height: 100%;
+  top: -100%;
+  animation: draw-v 6s ease-in-out infinite alternate;
+}
+
+@keyframes draw-h {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes draw-v {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(200%); }
+}
+
+.circle-draw {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(192, 139, 92, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: pulse-circle 10s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-circle {
+  0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+}
+
+.hero-overlay-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, transparent 0%, rgba(42, 61, 52, 0.8) 100%);
+  z-index: 2;
+}
