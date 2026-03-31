@@ -38,7 +38,7 @@
   justify-content: center;
   height: 100%;
   gap: 2rem;
-  padding-top: 3rem;
+  padding-top: 10rem;
 }
 
 .hero-box {
@@ -311,8 +311,8 @@
     padding-bottom: 3rem;
   }
   .hero-container {
-    gap: 1rem;
-    padding-top: 6rem;
+    gap: 1.5rem;
+    padding-top: 8rem;
   }
   .hero-image-wrapper img {
     max-height: 25vh !important;
