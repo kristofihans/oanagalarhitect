@@ -14,12 +14,8 @@ const Urbanism = lazy(() => import('./pages/Urbanism'));
 const Contact = lazy(() => import('./pages/Contact'));
 
 // Loading Fallback
-const LoadingFallback = () => (
-  <div style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-    <div style={{ border: '4px solid rgba(0,0,0,0.1)', borderTop: '4px solid var(--accent)', borderRadius: '50%', width: '40px', height: '40px', animation: 'spin 1s linear infinite' }}></div>
-    <style>{`@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }`}</style>
-  </div>
-);
+// Loading Fallback (removed white screen for better UX)
+const LoadingFallback = () => null;
 
 // Component to scroll to top on nav
 const ScrollToTop = () => {

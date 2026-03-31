@@ -1,11 +1,10 @@
 .hero {
-  min-height: 85vh;
-  padding-bottom: 2rem;
+  min-height: 70vh;
+  padding-bottom: 4rem;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: calc(-1 * var(--nav-height));
   border-bottom: 4px solid var(--accent);
 }
 
@@ -38,8 +37,8 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  gap: 1.5rem;
-  padding-top: 1rem;
+  gap: 2rem;
+  padding-top: 3rem;
 }
 
 .hero-box {
