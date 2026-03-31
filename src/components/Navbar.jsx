@@ -10,7 +10,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -28,7 +28,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className={`navbar ${scrolled ? 'scrolled glass' : ''}`}>
+    <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <Link to="/" className="logo">
           Oana Gal<br/><span>Arhitect</span>

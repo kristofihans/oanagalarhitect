@@ -62,7 +62,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <Navbar />
-      <main style={{ minHeight: '100vh', paddingTop: '80px' }}>
+      <main style={{ minHeight: '100vh' }}>
         <Suspense fallback={<LoadingFallback />}>
           <AnimatedRoutes />
         </Suspense>
